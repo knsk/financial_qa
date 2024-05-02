@@ -69,7 +69,7 @@ psql -U kanpo -d kanpo_development < data/kanpo_dump_20240501
 About past 10 years (until the end of April 2024) of financial results data posted in [官報](https://kanpou.npb.go.jp/).
 
 # Execution with OpenAI
-Set API key
+ - Set API key
 ```zsh
 expprt OPENAI_API_KEY='sk-xxx'
 ```
