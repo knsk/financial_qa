@@ -8,15 +8,11 @@ https://twitter.com/knsk_exa/status/1785332389847449985
 <img width="560" alt="Screenshot 2024-05-01 at 0 41 32" src="https://github.com/knsk/financial_qa/assets/1192029/c5f316f0-05c1-4a54-a555-8d2db848288f">
 
 # Background
- - World knowledge is not growing as fast as AI growth.
-
-  ref.
+ - **World knowledge is not growing as fast as AI growth**
    - [Will we run out of data? An analysis of the limits of scaling datasets in Machine Learning](https://arxiv.org/abs/2211.04325) [![arXiv](https://img.shields.io/badge/arXiv-2211.04325-a6dba0.svg)](https://arxiv.org/abs/2211.04325)
    - [Annual growth rate for the English Wikipedia](https://en.wikipedia.org/wiki/Wikipedia:Size_of_Wikipedia#Annual_growth_rate_for_the_English_Wikipedia)
    - [Number Of Books Published Per Year](https://wordsrated.com/number-of-books-published-per-year-2021/)
- - LLM's context length is growing with Transformer based architecture improvement and challenges in keeping performance with longer context length.
-
-  ref.
+ - **LLM's context length is growing with Transformer based architecture improvement and challenges in keeping performance with longer context length**
    - [GPT-4 Turbo and GPT-4 support 128K tokens](https://platform.openai.com/docs/models/gpt-4-turbo-and-gpt-4)
    - [Grok 1.5 supports 128K tokens](https://x.ai/blog/grok-1.5)
    - [Claude 3 supports 200K tokens](https://www.anthropic.com/news/claude-3-family)
@@ -62,11 +58,15 @@ CREATE USER kanpo WITH PASSWORD 'kanpo';
 
 8) Load data
 ```zsh
-psql -U kanpo -d kanpo_development < data/kanpo_dump_20240501
+psql -U kanpo -d kanpo_development < data/kanpo_20240501.dump
 ```
 
 # Data
 About past 10 years (until the end of April 2024) of financial results data posted in [官報](https://kanpou.npb.go.jp/).
+ - pg_dump of only articles table 
+   - data/kanpo_articles_20240501.dump.xz (1.3MB)
+ - pg_dump of all tables including images
+   - kanpo_dump_20240501.dump.xz (2.7GB) (to be uploaded somewhere)
 
 # Execution with OpenAI
  - Set API key
