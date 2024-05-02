@@ -7,6 +7,11 @@ https://twitter.com/knsk_exa/status/1785332389847449985
 
 <img width="560" alt="Screenshot 2024-05-01 at 0 41 32" src="https://github.com/knsk/financial_qa/assets/1192029/c5f316f0-05c1-4a54-a555-8d2db848288f">
 
+# Current capability
+1) Can summarize and analyze financial results
+2) Build strategy based on recent financial results
+3) Can speak management policy as CEO based on recent financial results and company's mission statement
+
 # Background
  - **World knowledge is not growing as fast as AI growth**
    - [Will we run out of data? An analysis of the limits of scaling datasets in Machine Learning](https://arxiv.org/abs/2211.04325) [![arXiv](https://img.shields.io/badge/arXiv-2211.04325-a6dba0.svg)](https://arxiv.org/abs/2211.04325)
@@ -43,7 +48,7 @@ brew install postgresql
 
 5) Start Postgres
 ```zsh
-brew services start postgresql # or with pg_ctl
+brew services start postgresql # or pg_ctl stop
 ```
 
 6) Connect to Postgres
@@ -62,7 +67,7 @@ psql -U kanpo -d kanpo_development < data/kanpo_20240501.dump
 ```
 
 # Data
-About past 10 years (until the end of April 2024) of financial results data posted in [官報](https://kanpou.npb.go.jp/).
+About the last 10 years (until the end of April 2024) of financial results data posted in [官報](https://kanpou.npb.go.jp/).
  - pg_dump of only articles table 
    - data/kanpo_articles_20240501.dump.xz (1.3MB)
  - pg_dump of all tables including images
